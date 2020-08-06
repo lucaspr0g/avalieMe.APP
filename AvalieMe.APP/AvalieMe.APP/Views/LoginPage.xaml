@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AvalieMe.APP.Views.LoginPage">
+    <ScrollView>
+        <StackLayout x:Name="stackPrincipal" Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
+            <Entry x:Name="txtLogin" Placeholder="Login" TextColor="Black" HorizontalOptions="Center" WidthRequest="300" IsVisible="{Binding IsVisible}"></Entry>
+            <Entry x:Name="txtSenha" Placeholder="Senha" TextColor="Black" IsPassword="True" HorizontalOptions="Center" WidthRequest="300" IsVisible="{Binding IsVisible}"></Entry>
+            <Button x:Name="btnLogin" Text="Entrar" Clicked="btnLogin_Clicked" IsVisible="{Binding IsVisible}"></Button>
+            <Button x:Name="btnCadastrar" Text="Cadastrar" Clicked="btnCadastrar_Clicked" IsVisible="{Binding IsVisible}"></Button>
+            <ActivityIndicator x:Name="actInd"
+                             IsRunning="{Binding IsLoading}"
+                             IsVisible="{Binding IsLoading}" Color="Red"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

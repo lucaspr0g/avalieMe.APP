@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/AvalieMe.APP/AvalieMe.APP/bin/Debug
+/AvalieMe.APP/AvalieMe.APP/obj
+/AvalieMe.APP/AvalieMe.APP.Android/bin/Debug
+/AvalieMe.APP/AvalieMe.APP.Android/obj

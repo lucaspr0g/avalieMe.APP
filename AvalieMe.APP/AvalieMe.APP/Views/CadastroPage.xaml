@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AvalieMe.APP.Views.CadastroPage">
+    <ScrollView>
+        <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
+            <Entry x:Name="txtEmail" Placeholder="Email" TextColor="Black" HorizontalOptions="Center" WidthRequest="300" IsVisible="{Binding IsVisible}"></Entry>
+            <Entry x:Name="txtNome" Placeholder="Nome" TextColor="Black" HorizontalOptions="Center" WidthRequest="300" IsVisible="{Binding IsVisible}"></Entry>
+            <Entry x:Name="txtSenha" Placeholder="Senha" TextColor="Black" IsPassword="True" HorizontalOptions="Center" WidthRequest="300" IsVisible="{Binding IsVisible}"></Entry>
+            <Entry x:Name="txtSenhaConfirm" Placeholder="Confirme a senha" TextColor="Black" IsPassword="True" HorizontalOptions="Center" WidthRequest="300" IsVisible="{Binding IsVisible}"></Entry>
+            <Button x:Name="btnSalvar" Text="Salvar" Clicked="btnSalvar_Clicked" IsVisible="{Binding IsVisible}"></Button>
+            <Button x:Name="btnVoltar" Text="Voltar" Clicked="btnVoltar_Clicked" IsVisible="{Binding IsVisible}"></Button>
+            <ActivityIndicator x:Name="actInd"
+                             IsRunning="{Binding IsLoading}"
+                             IsVisible="{Binding IsLoading}" Color="Red"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

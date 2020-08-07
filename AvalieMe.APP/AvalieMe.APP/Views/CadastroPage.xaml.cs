@@ -139,7 +139,7 @@ namespace AvalieMe.APP.Views
                 return;
             }
 
-            await Navigation.PushAsync(new ListaPage(usuarioSalvo));
+            await Navigation.PushAsync(new MainPage(usuarioSalvo));
         }
 
         private bool EmailValido(string email)

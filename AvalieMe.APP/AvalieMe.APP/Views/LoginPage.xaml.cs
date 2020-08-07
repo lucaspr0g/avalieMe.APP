@@ -1,4 +1,5 @@
 ﻿using AvalieMe.APP.API;
+using MonkeyCache.SQLite;
 using Plugin.Connectivity;
 using System;
 using System.ComponentModel;
@@ -48,6 +49,8 @@ namespace AvalieMe.APP.Views
             IsLoading = false;
             IsVisible = true;
             BindingContext = this;
+
+            Barrel.Current.EmptyAll();
         }
 
         private async void btnLogin_Clicked(object sender, EventArgs e)
@@ -87,7 +90,9 @@ namespace AvalieMe.APP.Views
                 return;
             }
 
-            await Navigation.PushAsync(new ListaPage(usuario));
+            Barrel.Current.Add("usuario", usuario, TimeSpan.FromHours(1));
+
+            await Navigation.PushAsync(new MainPage(usuario));
         }
 
         private void btnCadastrar_Clicked(object sender, EventArgs e)

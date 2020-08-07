@@ -5,9 +5,19 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="AvalieMe.APP.MainPage">
-
-    <StackLayout>
-        <Label Text="nic gostosa"></Label>
-    </StackLayout>
+    <ScrollView>
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+            <Picker x:Name="pckCategoria" HorizontalOptions="FillAndExpand" Title="Selecione a categoria" IsVisible="{Binding ComboVisible}">
+                <Picker.Items>
+                    <x:String>Corporativo</x:String>
+                    <x:String>Social</x:String>
+                </Picker.Items>
+            </Picker>
+            <Button x:Name="btnVotar" Text="Votar" Clicked="btnVotar_Clicked" IsVisible="{Binding BtnVisible}"></Button>
+            <Button x:Name="btnMeusTestes" Text="Meus testes" Clicked="btnMeusTestes_Clicked" IsVisible="{Binding BtnVisible}"></Button>
+            <Button x:Name="btnBuscarTestes" Text="Buscar testes" Clicked="btnBuscarTestes_Clicked" IsVisible="{Binding ComboVisible}"></Button>
+            <Button x:Name="btnVoltarOpcoes" Text="Voltar às opções" Clicked="btnVoltarOpcoes_Clicked" IsVisible="{Binding ComboVisible}"></Button>
+        </StackLayout>
+    </ScrollView>
 
 </ContentPage>
